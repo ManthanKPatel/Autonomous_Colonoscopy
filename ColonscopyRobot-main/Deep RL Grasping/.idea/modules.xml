@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Deep RL Grasping.iml" filepath="$PROJECT_DIR$/.idea/Deep RL Grasping.iml" />
+      <module fileurl="file:////wsl$/Ubuntu/home/manthanpatel/UofT/AER1517/Trial_Files/.idea/Trial_Files.iml" filepath="//wsl$/Ubuntu/home/manthanpatel/UofT/AER1517/Trial_Files/.idea/Trial_Files.iml" />
+    </modules>
+  </component>
+</project>
