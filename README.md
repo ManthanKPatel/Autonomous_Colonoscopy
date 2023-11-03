@@ -101,7 +101,7 @@ References:
 
 Colon Environment 
 
-![DQN_Flowchart]('/ColonscopyRobot-main/docs/planning/program_flow_chart.png)
+![DQN_Flowchart](/ColonscopyRobot-main/docs/planning/program_flow_chart.png)
 
 References:
 - https://www.analyticsvidhya.com/blog/2019/04/introduction-deep-q-learning-python/
