@@ -8,7 +8,7 @@ The open ai gym environment used by RL Agent
 ```
 env = gym.make('FetchPickAndPlace-v1')
 ```
-![grasping_robot](/docs/grasping/axes_of_robot.png)
+![grasping_robot](/ColonscopyRobot-main/docs/grasping/axes_of_robot.png)
 
 The environment observation consists of the following:
 ```obs = np.concatenate([ grip_pos, object_pos.ravel(), object_rel_pos.ravel(), gripper_state, object_rot.ravel(), object_velp.ravel(), object_velr.ravel(), grip_velp, gripper_vel, ])```
