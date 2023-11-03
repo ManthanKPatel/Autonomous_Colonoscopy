@@ -13,11 +13,11 @@ env = gym.make('FetchPickAndPlace-v1')
 The environment observation consists of the following:
 ```obs = np.concatenate([ grip_pos, object_pos.ravel(), object_rel_pos.ravel(), gripper_state, object_rot.ravel(), object_velp.ravel(), object_velr.ravel(), grip_velp, gripper_vel, ])```
 
-![observations_of_robot](/docs/grasping/observations_of_grasping_robot.png)
+![observations_of_robot](/ColonscopyRobot-main/docs/grasping/observations_of_grasping_robot.png)
 
 The input action in the FetchPickAndPlace environments is expected as an posistional increments. The first three values define an increment of the current position tool center point of the robot. The last value defines the spacing between the robots grippers.
 
-![actions_of_robot](/docs/grasping/action_space_grasping.png)
+![actions_of_robot](/ColonscopyRobot-main/docs/grasping/action_space_grasping.png)
 
 The reward function used in the environment.
 ```
@@ -39,18 +39,18 @@ def goal_distance(goal_a, goal_b):
 
 The Soft-Actor-Critic Algorithm
 
-![soft-actor-critic-alogrithm](/docs/grasping/soft-actor-critic-algorithm.jpg)
+![soft-actor-critic-alogrithm](/ColonscopyRobot-main/docs/grasping/soft-actor-critic-algorithm.jpg)
 
 
 #### Training the Q-Function or Actor 1 and Actor 2 ####
 
 The soft Q-function parameters can be trainined to minimize the soft Bellman residual
 
-![equation_7_and_8](/docs/grasping/equation1.jpg)
+![equation_7_and_8](/ColonscopyRobot-main/docs/grasping/equation1.jpg)
 
 which again can be optimized with stochastic gradients.
 
-![equation_9](/docs/grasping/equation2.jpg)
+![equation_9](/ColonscopyRobot-main/docs/grasping/equation2.jpg)
 
 #### Training the Value-Functions ####
 
@@ -58,29 +58,29 @@ The state value function approximates the soft value. There is no need in princi
 
 The soft value function is trained to minimize the squared residual error.
 
-![equation_5](/docs/grasping/equation3.jpg)
+![equation_5](/ColonscopyRobot-main/docs/grasping/equation3.jpg)
 
 The gradient of equation 5 can be estimated with an unbiased estimator.
 
-![equation_6](/docs/grasping/equation4.jpg)
+![equation_6](/ColonscopyRobot-main/docs/grasping/equation4.jpg)
 
 #### Training the Policy Function ####
 
 The policy parameters can be learned by directly minimizing the expected KL-divergence.
 
-![equation_10](/docs/grasping/equation5.jpg)
+![equation_10](/ColonscopyRobot-main/docs/grasping/equation5.jpg)
 
 To avoid backpropagating errors a reparameterization tick is used to make sure that sampling from policy is differentiable. The policy is now parameterized as follows:
 
-![eqaution_11](/docs/grasping/equation6.jpg)
+![eqaution_11](/ColonscopyRobot-main/docs/grasping/equation6.jpg)
 
 where elispon is input noise vector, sampled from fixed gaussian distribution. Rewriting the objective Bellman function.
 
-![equation_12](/docs/grasping/equation7.jpg)
+![equation_12](/ColonscopyRobot-main/docs/grasping/equation7.jpg)
 
 We can approximate the gradient as the following.
 
-![equation_13]('/docs/grasping/equation8.jpg')
+![equation_13]('/ColonscopyRobot-main/docs/grasping/equation8.jpg')
 
 Block Diagram putting training all together.
 
@@ -101,7 +101,7 @@ References:
 
 Colon Environment 
 
-![DQN_Flowchart]('/docs/planning/program_flow_chart.png)
+![DQN_Flowchart]('/ColonscopyRobot-main/docs/planning/program_flow_chart.png)
 
 References:
 - https://www.analyticsvidhya.com/blog/2019/04/introduction-deep-q-learning-python/
